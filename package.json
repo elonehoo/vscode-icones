@@ -1,12 +1,12 @@
 {
-  "publisher": "antfu",
-  "name": "ext-name",
-  "displayName": "ext-name",
+  "publisher": "elonehoo",
+  "name": "vscode-icones",
+  "displayName": "vscode icones",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@8.9.2",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Elone Hoo <elonehoo@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/antfu",
   "homepage": "https://github.com/antfu/ext-name#readme",
@@ -34,6 +34,29 @@
   "activationEvents": [
     "onStartupFinished"
   ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vscode-icones",
+          "title": "VsCode Icones",
+          "icon": "res/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "vscode-icones": [
+        {
+          "id": "package-dependencies",
+          "name": "Dependencies"
+        },
+        {
+          "id": "package-outline",
+          "name": "Outline"
+        }
+      ]
+    }
+  },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
